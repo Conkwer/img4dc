@@ -1,0 +1,299 @@
+int32_t _start(void* arg1 @ ebp)
+{
+    void* eax;
+    void* var_4 = eax;
+    int32_t ebx;
+    int32_t var_10 = ebx;
+    int32_t* var_14 = &var_10;
+    void* var_18 = arg1;
+    int32_t edi;
+    int32_t var_20 = edi;
+    int32_t* esi = &data_408015;
+    char* edi_1 = &data_401000;
+    int32_t* j_6 = &data_401000;
+    
+    while (true)
+    {
+        int32_t ebx_1 = *esi;
+        int32_t* temp1_1 = esi;
+        esi -= 0xfffffffc;
+        bool c_1 = temp1_1 < 0xfffffffc;
+        int32_t i_1 = ebx_1 + ebx_1;
+        bool c_2 = ebx_1 + ebx_1 < ebx_1 || (c_1 && ebx_1 + ebx_1 == ebx_1);
+        int32_t i;
+        int32_t i_2;
+        
+        do
+        {
+            if (c_2)
+            {
+                eax = *esi;
+                esi += 1;
+                *edi_1 = eax;
+                edi_1 = &edi_1[1];
+            }
+            else
+            {
+                int32_t eax_1 = 1;
+                
+                while (true)
+                {
+                    int32_t ebx_3 = i_1 * 2;
+                    bool c_4 = i_1 * 2 < i_1;
+                    
+                    if (i_1 == -(i_1))
+                    {
+                        int32_t ebx_2 = *esi;
+                        int32_t* temp10_1 = esi;
+                        esi -= 0xfffffffc;
+                        bool c_3 = temp10_1 < 0xfffffffc;
+                        ebx_3 = ebx_2 + ebx_2;
+                        c_4 = ebx_2 + ebx_2 < ebx_2 || (c_3 && ebx_2 + ebx_2 == ebx_2);
+                    }
+                    
+                    eax_1 = eax_1 + eax_1;
+                    i_1 = ebx_3 * 2;
+                    
+                    if (ebx_3 * 2 < ebx_3)
+                    {
+                        if (ebx_3 != -(ebx_3))
+                            break;
+                        
+                        int32_t ebx_4 = *esi;
+                        int32_t* temp14_1 = esi;
+                        esi -= 0xfffffffc;
+                        bool c_6 = temp14_1 < 0xfffffffc;
+                        i_1 = ebx_4 + ebx_4;
+                        
+                        if (ebx_4 + ebx_4 < ebx_4 || (c_6 && ebx_4 + ebx_4 == ebx_4))
+                            break;
+                    }
+                }
+                
+                if (eax_1 >= 3)
+                {
+                    int32_t eax_2;
+                    eax_2 = *esi;
+                    esi += 1;
+                    eax = eax_2 ^ 0xffffffff;
+                    
+                    if (!eax)
+                    {
+                        int32_t* j_8 = j_6;
+                        char* j_9 = j_8;
+                        int32_t ecx_4 = 0x6b;
+                        
+                        while (true)
+                        {
+                            eax = *j_9;
+                            j_9 = &j_9[1];
+                            eax -= 0xe8;
+                            
+                            while (eax <= 1)
+                            {
+                                if (*j_9 != 1)
+                                    break;
+                                
+                                i_1 = j_9[4];
+                                int32_t eax_3;
+                                eax_3 = *j_9 >> 8;
+                                int32_t eax_4 = ROLD(eax_3, 0x10);
+                                char temp0_1 = *(&eax_4 + 1);
+                                *(&eax_4 + 1) = eax_4;
+                                eax_4 = temp0_1;
+                                i_1 -= 0xe8;
+                                *j_9 = eax_4 - j_9 + j_8;
+                                j_9 = &j_9[5];
+                                eax = i_1;
+                                ecx_4 -= 1;
+                                
+                                if (!ecx_4)
+                                {
+                                    int32_t* j_5 = &j_8[0x1800];
+                                label_408d66:
+                                    int32_t* j_7 = *j_5;
+                                    
+                                    if (j_7)
+                                    {
+                                        int32_t* ebx_12 = j_5[1] + j_8;
+                                        j_6 = j_7 + j_8 + 0x83e4;
+                                        j_5 = &j_5[2];
+                                        arg1 = j_8[0x2108](j_6);
+                                        
+                                        while (true)
+                                        {
+                                            int32_t eax_9;
+                                            eax_9 = *j_5;
+                                            j_5 += 1;
+                                            eax_9 = eax_9;
+                                            
+                                            if (!eax_9)
+                                                goto label_408d66;
+                                            
+                                            int32_t* j = j_5;
+                                            j_6 = j_5;
+                                            
+                                            while (j)
+                                            {
+                                                bool cond:0_1 = eax_9 - 1 != *j_5;
+                                                j_5 += 1;
+                                                j -= 1;
+                                                
+                                                if (!cond:0_1)
+                                                    break;
+                                            }
+                                            
+                                            int32_t eax_11 = j_8[0x2109](arg1);
+                                            
+                                            if (!eax_11)
+                                            {
+                                                j_7 = j_8[0x210d]();
+                                                break;
+                                            }
+                                            
+                                            *ebx_12 = eax_11;
+                                            ebx_12 = &ebx_12[1];
+                                        }
+                                    }
+                                    
+                                    int32_t ebp = j_8[0x210a];
+                                    j_6 = j_7;
+                                    int32_t** var_28_2 = &j_6;
+                                    int32_t var_2c = 4;
+                                    int32_t var_30 = 0x1000;
+                                    void* var_34 = &j_8[-0x400];
+                                    ebp(var_34, var_30, var_2c, var_28_2, j_6);
+                                    *(j_8 - 0xe61) &= 0x7f;
+                                    *(j_8 - 0xe39) &= 0x7f;
+                                    void* eax_13 = var_34;
+                                    var_34 = eax_13;
+                                    ebp(&j_8[-0x400], 0x1000, eax_13, &var_34, var_34);
+                                    int32_t* j_1 = &var_20;
+                                    void var_a0;
+                                    
+                                    do
+                                    {
+                                        *(j_1 - 4) = 0;
+                                        j_1 -= 4;
+                                    } while (j_1 != &var_a0);
+                                    
+                                    /* jump -> 0x401270 */
+                                }
+                            }
+                        }
+                    }
+                    else
+                        arg1 = eax;
+                }
+                
+                int32_t ebx_5 = i_1 * 2;
+                bool c_8 = i_1 * 2 < i_1;
+                
+                if (i_1 == -(i_1))
+                {
+                    int32_t ebx_6 = *esi;
+                    int32_t* temp21_1 = esi;
+                    esi -= 0xfffffffc;
+                    bool c_9 = temp21_1 < 0xfffffffc;
+                    ebx_5 = ebx_6 + ebx_6;
+                    c_8 = ebx_6 + ebx_6 < ebx_6 || (c_9 && ebx_6 + ebx_6 == ebx_6);
+                }
+                
+                int32_t ecx_1 = 0 + 0;
+                i_1 = ebx_5 * 2;
+                bool c_10 = ebx_5 * 2 < ebx_5;
+                
+                if (ebx_5 == -(ebx_5))
+                {
+                    int32_t ebx_7 = *esi;
+                    int32_t* temp24_1 = esi;
+                    esi -= 0xfffffffc;
+                    bool c_11 = temp24_1 < 0xfffffffc;
+                    i_1 = ebx_7 + ebx_7;
+                    c_10 = ebx_7 + ebx_7 < ebx_7 || (c_11 && ebx_7 + ebx_7 == ebx_7);
+                }
+                
+                int32_t ecx_2 = ecx_1 + ecx_1;
+                
+                if (!ecx_2)
+                {
+                    int32_t ecx_3 = ecx_2 + 1;
+                    
+                    while (true)
+                    {
+                        int32_t ebx_9 = i_1 * 2;
+                        bool c_13 = i_1 * 2 < i_1;
+                        
+                        if (i_1 == -(i_1))
+                        {
+                            int32_t ebx_8 = *esi;
+                            int32_t* temp33_1 = esi;
+                            esi -= 0xfffffffc;
+                            bool c_12 = temp33_1 < 0xfffffffc;
+                            ebx_9 = ebx_8 + ebx_8;
+                            c_13 = ebx_8 + ebx_8 < ebx_8 || (c_12 && ebx_8 + ebx_8 == ebx_8);
+                        }
+                        
+                        ecx_3 = ecx_3 + ecx_3;
+                        i_1 = ebx_9 * 2;
+                        
+                        if (ebx_9 * 2 < ebx_9)
+                        {
+                            if (ebx_9 != -(ebx_9))
+                                break;
+                            
+                            int32_t ebx_10 = *esi;
+                            int32_t* temp36_1 = esi;
+                            esi -= 0xfffffffc;
+                            bool c_15 = temp36_1 < 0xfffffffc;
+                            i_1 = ebx_10 + ebx_10;
+                            
+                            if (ebx_10 + ebx_10 < ebx_10 || (c_15 && ebx_10 + ebx_10 == ebx_10))
+                                break;
+                        }
+                    }
+                    
+                    ecx_2 = ecx_3 + 2;
+                }
+                
+                int32_t j_4 = ecx_2 + 1;
+                char* edx_1 = edi_1 + arg1;
+                
+                if (arg1 <= 0xfffffffc)
+                {
+                    int32_t j_2;
+                    
+                    do
+                    {
+                        eax = *edx_1;
+                        edx_1 = &edx_1[4];
+                        *edi_1 = eax;
+                        edi_1 = &edi_1[4];
+                        j_2 = j_4;
+                        j_4 -= 4;
+                    } while (j_2 > 4);
+                    edi_1 = &edi_1[j_4];
+                }
+                else
+                {
+                    int32_t j_3;
+                    
+                    do
+                    {
+                        eax = *edx_1;
+                        edx_1 = &edx_1[1];
+                        *edi_1 = eax;
+                        edi_1 = &edi_1[1];
+                        j_3 = j_4;
+                        j_4 -= 1;
+                    } while (j_3 != 1);
+                }
+            }
+            
+            i = i_1;
+            i_2 = i_1;
+            i_1 *= 2;
+            c_2 = i + i_2 < i;
+        } while (i != -(i_2));
+    }
+}

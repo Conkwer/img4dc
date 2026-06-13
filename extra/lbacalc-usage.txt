@@ -1,0 +1,19 @@
+LBACALC - 0.1 - by SiZ!^DCS 26/05/07
+http://sbibuilder.shorturl.com/
+
+This proggy was designed for computing MSINFO value to use with mkisofs when
+generating your data track, in case of you are using a lot of CDDA tracks. But
+watch out : tracks must be in RAW format (*NOT* WAV).
+
+Usage: lbacalc <track_1.raw ... track_n.raw>
+
+Examples:
+   lbacalc t1.raw : The proggy prints for example 11702 (in case of a minimal
+                    track size of 710304 bytes, corresponding to 4 sec).
+
+   lbacalc t1.raw t2.raw t3.raw t4.raw : Example output : 12608.
+
+Now, you can use the computed value in mkisofs:
+  mkisofs -C 0,12608 -V IMAGE -G IP.BIN -joliet -rock -l -o data.iso data
+
+And now, you can use your generated iso in your favorite selfboot proggy.
